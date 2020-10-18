@@ -12,18 +12,7 @@
 
     <!-- TODO #1 - Use a loop to display job results in a table. -->
     <table class="job-listing">
-            <th:block th:each = "job : ${jobs}">
-                <tr>
-                    <td>
-                        <p th:text = "${job.id}">ID</p>
-                        <p th:text = "${job.name}">Name</p>
-                        <p th:text = "${job.employer}">Employer</p>
-                        <p th:text = "${job.location}">Location</p>
-                        <p th:text = "${job.positionType}">Position Type</p>
-                        <p th:text = "${job.coreCompetency}">Skill</p>
-                    </td>
-                </tr>
-            </th:block>
+            <th:block th:replace = "fragments :: jobResultsTable"></th:block>
     </table>
 
 </div>
